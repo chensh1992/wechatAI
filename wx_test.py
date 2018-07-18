@@ -3,10 +3,16 @@ import time
 import random
 import requests
 from wxpy import *
-from . import settings
+import os
+
+TULING_TOKEN = os.environ.get("TULING_TOKEN","")
+
+try:
+    from settings import *
+except:
+    pass
 
 API_URL = 'http://www.tuling123.com/openapi/api'
-TULING_TOKEN = settings.TOKEN
 DDD = '。。。'
 EMOJI = ['[可怜]', '[微笑]', '[愉快]', '[委屈]', '🤔', '😳']
 
